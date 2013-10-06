@@ -1,17 +1,14 @@
 require 'task1'
 
 describe Task1 do 
-  let(:Array) {Array.new}
+	it 'adds things together' do
+		addition = [1,2,3,4].insect {|memo, number| memo + number}
+		expect(addition).to eq 10
+	end
 
-
-describe 'insect' do
-
- it 'should return zero on an empty array' do
- end	
-
- it 'it should return the sum of the array values' do	
- end	
-
+	it 'multiplies things together' do
+		multiplication = [1,2,3,4].insect {|memo, number| memo * number}
+		expect(multiplication).to eq 24
+	end
 
 end 
-

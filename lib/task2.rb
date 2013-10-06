@@ -12,7 +12,7 @@ class Takeaway
  #        k
  #    end
 
-
+	
     def your_order
 		@dishes << "sausages" << "hamburger" << "tofu" << "carrot pizza"
 		@list = {@dishes[0] => 4.30 ,@dishes[1] => 3.20 , @dishes[2] => 3.40 , @dishes[3] => 5}

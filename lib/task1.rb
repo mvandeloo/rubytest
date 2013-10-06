@@ -1,11 +1,11 @@
 class Array
 
         def insect
-            sum = 0
-            self.each do |elem|
-                sum += yield(sum, elem)
+            sum = first
+            self[1..-1].each do |elem|
+                sum = yield(sum, elem)
             end
-           puts sum
+           sum
          end
    end
 
@@ -13,6 +13,4 @@ class Array
   a=[1,2,3]
   puts a.insect { |result, element| result + element }
 
-
-
-
+  
